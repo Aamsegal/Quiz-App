@@ -2,8 +2,46 @@ body {
   background-image: url("https://wallpapercave.com/wp/91HTO4K.jpg");
   background-size: cover;
 }
+.starting-Page {
+  margin-left: auto;
+  margin-right: auto;
 
-li {
+  border: 2px solid black;
+  max-width: 600px;
+}
+
+.starting-Page-Heading {
+  text-align: center;
+}
+
+.animal-Image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  max-width: 550px;
+}
+
+.selection-Button {
+  text-align: center;
+  font-size: 30px;
+}
+
+/*.selection-Button.Start {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 36px;
+}*/
+
+.selection-Button.Answer {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+  width: 90%;
+  padding: 10px;
+}
+
+.question-Block {
     border: 2px solid black;
     border-radius: 10px;
     padding-bottom: 20px;
@@ -12,25 +50,65 @@ li {
     margin-left: auto;
     margin-right: auto;
     list-style: none;
-  }
-.buttonCorrect {
-  background-color: #00ff00;
+    background-color: rgb(211,225,148);
 }
 
-button {
-  background-color: #ff0000;
+.question-Sentence {
+  text-align: center;
+  font-size: 25px;
+  text-decoration: underline;
 }
 
 .question {
   text-align: center;
-  font-size: 20px;
-}
-
-.shopping-item-controls {
-  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
 }
 
 .correctAnswer {
   text-align: center;
   display: none;
+}
+
+.score-Info {
+  border: 2px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.score-text {
+  text-align: center;
+}
+
+.start-Over {
+  text-align: center;
+  margin: 20px;
+}
+
+.start-Over-Button {
+  font-size: 24px;
+  padding: 20px;
+}
+
+.correct-Answer-Block {
+  text-align: center;
+}
+
+.correct-Answer {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border: 1px solid black;
+  max-width: 400px;
+  padding: 10px;
+}
+
+.correct-Answer.correct {
+  background-color: green;
+}
+
+.correct-Answer.incorrect {
+  background-color: red;
 }
