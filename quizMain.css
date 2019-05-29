@@ -1,0 +1,36 @@
+body {
+  background-image: url("https://wallpapercave.com/wp/91HTO4K.jpg");
+  background-size: cover;
+}
+
+li {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    margin: 25px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+  }
+.buttonCorrect {
+  background-color: #00ff00;
+}
+
+button {
+  background-color: #ff0000;
+}
+
+.question {
+  text-align: center;
+  font-size: 20px;
+}
+
+.shopping-item-controls {
+  text-align: center;
+}
+
+.correctAnswer {
+  text-align: center;
+  display: none;
+}

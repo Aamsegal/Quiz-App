@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Quiz App</title>
+    <link href="quizMain.css" rel="stylesheet" type="text/css" />
+
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous">
+  </script>
+
+  </head>
+  <body>
+
+            <li>
+                <p class="question">Question 1</p>
+                <div class="shopping-item-controls">
+                    <button class="buttonCorrect">
+                        <span class="${answer1FromObject}">Answer 1</span>
+                    </button>
+                    <button class="buttonIncorrect">
+                        <span class="${answer2FromObject}">Answer 2</span>
+                    </button>
+                    <button class="buttonIncorrect">
+                        <span class="${answer3FromObject}">Answer 3</span>
+                    </button>
+                    <button class="buttonIncorrect">
+                        <span class="${answer4FromObject}">Answer 4</span>
+                    </button>
+                </div>
+                <p class="correctAnswer">Solution</p>
+            </li>
+
+            <li>
+                    <p class="question">Question 2</p>
+                    <div class="shopping-item-controls">
+                        <button class="buttonIncorrect">
+                            <span class="${answer1FromObject}">Answer 1</span>
+                        </button>
+                        <button class="buttonCorrect">
+                            <span class="${answer2FromObject}">Answer 2</span>
+                        </button>
+                        <button class="buttonIncorrect">
+                            <span class="${answer3FromObject}">Answer 3</span>
+                        </button>
+                        <button class="buttonIncorrect">
+                            <span class="${answer4FromObject}">Answer 4</span>
+                        </button>
+                    </div>
+                </li>
+
+    <script src="script.js"></script>
+  </body>
+</html>
