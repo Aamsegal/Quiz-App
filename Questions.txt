@@ -1,0 +1,5 @@
+Question List
+	What type of animal is a seahorse: Crustacean
+	Which of the following dogs is the smallest: Chihuahua
+	What color are zebras: Black with white striped
+	What existing bird has the larget wing span: Albatross
