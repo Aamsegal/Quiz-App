@@ -75,14 +75,18 @@ function renderQuestions() {
 
         event.preventDefault();
 
-        const answerIndex = $(event.currentTarget).value;
+        const answerIndex = $(event.currentTarget).val();
+
+        const questionAnswerIndex = $(event.currentTarget).attr("data-Question");
+
 
         /*const question = $(event.currentTarget).data("answers");*/
 
         /*questionAndAnswer[question].userAnswer = $(event.currentTarget).attr("id");*/
 
-
-        console.log(event.currentTarget.val());
+        userSelectedAnswer[questionAnswerIndex] = Number(answerIndex);
+        console.log(answerIndex);
+        console.log(userSelectedAnswer);
         
     });
 
@@ -107,6 +111,10 @@ function submitButtonPress() {
     /*If the button is clicked, and the user has not selected an answer for 
     one of the questions, text will display on the screen saying they missed
     an answer*/
+
+function renderResultsPage() {
+    //renders the results page
+}
 
 function getItemAnswer() {
 
