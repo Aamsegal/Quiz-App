@@ -1,47 +1,43 @@
 const questionAndAnswer = [
-    /*{question: "What type of animal is a seahorse?", answer1:"Crustacean",
-    answer2:"Arachnid",answer3:"Fish", answer4:"Shell", correctAnswer:"Crustacean"},
+    {question: "What type of animal is a seahorse?", answers:["Crustacean", "Arachnid","Fish","Shell"], correctAnswer: 0, userAnswer: 4},
 
-    {question: "Which of the following dogs is the smallest", answer1:"Dachshund",
-    answer2:"Poodle",answer3:"Pomeranian", answer4:"Chihuahua", correctAnswer:"Chihuahua"},
+    {question: "Which of the following dogs is the smallest", answers:["Dachshund","Poodle","Pomeranian","Chihuahua"], correctAnswer:3, userAnswer:4},
 
-    {question: "What color are Zebras?", answer1:"White with black stripes",
-    answer2:"Black with shite stripes",answer3:"Both of the above", answer4:"None of the above", correctAnswer:"Black with white stripes"},
+    {question: "What color are Zebras?", answers:["White with black stripes","Black with shite stripes","Both of the above","None of the above"], 
+    correctAnswer:2, userAnswer:4},
 
-    {question: "What existing bird has the largest wingspan", answer1:"Stork",
-    answer2:"Swan",answer3:"Condor", answer4:"Albatross", correctAnswer:"Albatross"},
+    {question: "What existing bird has the largest wingspan", answers:["Stork","Swan","Condor","Albatross"], correctAnswer:3, userAnswer:4},
 
-    {question: "Whats the biggest animal that has ever lived", answer1:"Blue whale",
-    answer2:"African elephant",answer3:"Brontosaurus", answer4:"Spinosaurus", correctAnswer:"Blue whale"},
+    {question: "Whats the biggest animal that has ever lived", answers:["Blue whale","African elephant","Brontosaurus","Spinosaurus"], correctAnswer:0, userAnswer:4},
 
-    {question: "What pets do more familes own", answer1:"Birds",
-    answer2:"Cats",answer3:"Dogs", answer4:"Horses", correctAnswer:"Cats"},
+    {question: "What pets do more familes own", answers:["Birds","Cats","Dogs","Horses"], correctAnswer:1, userAnswer:4},
 
-    {question: "What animal lives the longest", answer1:"Clam",
-    answer2:"Red sea urchin",answer3:"Galapagos tortois", answer4:"Rougheye rockfish", correctAnswer:"Clam"},
+    {question: "What animal lives the longest", answers:["Clam","Red sea urchin","Galapagos tortois","Rougheye rockfish"], correctAnswer:0, userAnswer:4},
 
-    {question: "What are female elephants called?", answer1:"Mares",
-    answer2:"Sows",answer3:"Cows", answer4:"Dams", correctAnswer:"Cows"},*/
+    {question: "What are female elephants called?", answers:["Mares","Sows","Cows","Dams"], correctAnswer:2, userAnswer:4},
 
-    {question: "Which of the following animals sleep standing up?", answers:["Gorillas","Flamingos","Camels","Ravens"], correctAnswer:1, userAnswer:0},
+    {question: "Which of the following animals sleep standing up?", answers:["Gorillas","Flamingos","Camels","Ravens"], correctAnswer:1, userAnswer:4},
 
     {question: "What is the fastest water animal?", answers:["Porpoise","Sailfish","Flying fish","Tuna"],
     correctAnswer:1, userAnswer:0}
 ]
 
-let currentQuestion = 0;
+let userSelectedAnswer = [4,4,4,4,4,4,4,4,4,4]
+/*create an array of the users answeres. If one of the elements in the array is 4 when they try to move on
+they will be prompted to answer the question before they can move on*/
 
 
 function generateAnswerHtml(item,questionIndex) {
     return item.answers.map( (answer,index) => 
         `<div class="question">
         <form action = "quizResultsPage.html">
-            <button id = ${index} data-Question= ${questionIndex} class="selection-Button Answer">
+            <button id = ${index} data-Question= ${questionIndex} class="selection-Button Answer" value = ${index}>
                 <span>${answer}</span>
             </button>
         </form>
     </div>`).join("")
 }
+//Generates html for every question in an object
 
 function generateItemElement(item,index) {
 
@@ -58,6 +54,8 @@ function generateItemElement(item,index) {
 
 function generateFullQuestionList(questionList) {
 
+    /*const item = questionList.map((item,index) => generateItemElement(item,currentQuestion));*/
+
     const item = questionList.map((item,index) => generateItemElement(item,index));
 
     return item.join("");
@@ -73,19 +71,42 @@ function renderQuestions() {
     $('.question-Block').html(questionString);
 
     $('.selection-Button.Answer').on('click', event => {
+    /*$('.selection-Button.Answer').on('click', event => {*/
 
         event.preventDefault();
 
-        const question = $(event.currentTarget).data("question"); 
+        const answerIndex = $(event.currentTarget).value;
 
-        questionAndAnswer[question].userAnswer = $(event.currentTarget).attr("id");
+        /*const question = $(event.currentTarget).data("answers");*/
 
-        currentQuestion++;
+        /*questionAndAnswer[question].userAnswer = $(event.currentTarget).attr("id");*/
+
+
+        console.log(event.currentTarget.val());
+        
     });
 
     //renders the list of questions and answers
 
 }
+
+function submitButtonPress() {
+
+        if (userSelectedAnswer.includes(3) === true) {
+            console.log('The array has a 4 in it');
+        }
+        
+        else {
+            document.getElementById('show-1').style.display = "none";
+            document.getElementById('show-2').style.display = "none";
+
+            document.getElementById('hidden-1').style.display = "block";
+            document.getElementById('hidden-2').style.display = "block";
+        }
+    }
+    /*If the button is clicked, and the user has not selected an answer for 
+    one of the questions, text will display on the screen saying they missed
+    an answer*/
 
 function getItemAnswer() {
 

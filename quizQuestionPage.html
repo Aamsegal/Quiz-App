@@ -15,9 +15,9 @@
 
   </head>
   <body>
-    <div class = "question-Block">
-    
-        <p class="question-Sentence">Question 1</p>
+    <div class = "question-Block" id = "show-1">
+    <!--     
+           <p class="question-Sentence">Question 1</p>
         <div class="question One">
             <form action = "quizResultsPage.html">
                 <button class="selection-Button Answer">
@@ -48,11 +48,35 @@
                     <span>Answer 4</span>
                 </button>
             </form>
-        </div>
+        </div>-->
 
     </div>
-            
 
-    <script src="quizIndexs.js"></script>
+    <div class = "question submit-Button-Box" id = "show-2">
+        <button class = "submit-Button" onclick="submitButtonPress();">
+            <span>Submit</span>
+        </button>
+    </div>
+    <!--div for the submit button thats runs a function on click to check if all answers
+    are submited-->
+
+
+    <div class = "report-Page" id = "hidden-1" style = "display:none;">
+        
+    </div>
+    <!--div for the report page text, hidden by default and unhidden when the user succesfully submits
+    their answers-->
+
+
+    <div class = "question submit-Button-Box" id = "hidden-2" style = "display:none;">
+        <button class = "reset-Button" onclick="submitButtonPress();">
+            <span>Try again</span>
+        </button>
+    </div>
+    <!--div for restart button, hidden by default and unhidden when the user succesfully submits
+    their answers-->
+
+
+    <script src="quizIndex.js"></script>
   </body>
 </html>
