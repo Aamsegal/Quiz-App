@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">  
   <head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Quiz App</title>
+    <title>Quiz App and Results</title>
     <link href="quizMain.css" rel="stylesheet" type="text/css" />
 
     <script
@@ -16,56 +16,27 @@
   </head>
   <body>
     <div class = "question-Block" id = "show-1">
-    <!--     
-           <p class="question-Sentence">Question 1</p>
-        <div class="question One">
-            <form action = "quizResultsPage.html">
-                <button class="selection-Button Answer">
-                    <span>Answer 1</span>
-                </button>
-            </form>
-        </div>
-
-        <div class="question Two">
-            <form action = "quizResultsPage.html">
-                <button class="selection-Button Answer">
-                    <span>Answer 2</span>
-                </button>
-            </form>
-        </div>
-
-        <div class="question Three">
-            <form action = "quizResultsPage.html">
-                <button class="selection-Button Answer">
-                    <span>Answer 3</span>
-                </button>
-            </form>
-        </div>
-
-        <div class="question Four">
-            <form action = "quizResultsPage.html">
-                <button class="selection-Button Answer">
-                    <span>Answer 4</span>
-                </button>
-            </form>
-        </div>-->
 
     </div>
     <!--div for the submit button thats runs a function on click to check if all answers
     are submited-->
 
 
-    <div class = "report-Page" id = "hidden-1" style = "display:none;">
-        
+    <div class = "report-Block" id = "hidden-1" style = "display:none;">
     </div>
     <!--div for the report page text, hidden by default and unhidden when the user succesfully submits
     their answers-->
 
-
+    
     <div class = "question submit-Button-Box" id = "hidden-2" style = "display:none;">
-        <button class = "reset-Button" onclick="submitButtonPress();">
-            <span>Try again</span>
-        </button>
+        <div class="score">
+            
+        </div>
+        <form action = "index.html">
+            <button class = "reset-Button" onclick="submitButtonPress();">
+                <span>Try again</span>
+            </button>
+        </form>
     </div>
     <!--div for restart button, hidden by default and unhidden when the user succesfully submits
     their answers-->

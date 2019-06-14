@@ -30,6 +30,16 @@ body {
   padding: 10px;
 }
 
+.results-Choice {
+  border: 1px solid black;
+  background: #E1E1E1;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .selection-Button.Answer {
   margin-left: auto;
   margin-right: auto;
@@ -122,19 +132,19 @@ body {
   text-align: center;
 }
 
-.correct-Answer {
+/*.correct-Answer {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   border: 1px solid black;
   max-width: 400px;
   padding: 10px;
-}
+}*/
 
-.correct-Answer.correct {
+.correct-Answer {
   background-color: green;
 }
 
-.correct-Answer.incorrect {
+.incorrect-Answer {
   background-color: red;
 }
