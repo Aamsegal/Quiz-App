@@ -15,30 +15,44 @@
 
   </head>
   <body>
-    <div class = "question-Block" id = "show-1">
 
-    </div>
-    <!--div for the submit button thats runs a function on click to check if all answers
+    <header class="question-Text" id = "show-1">
+      
+    </header>
+    
+    <main class ="question-Block" id = "show-2">
+
+    </main>
+    <!--header for the submit button thats runs a function on click to check if all answers
     are submited-->
 
+    <header class="current-Score" id = "show-3">
 
-    <div class = "report-Block" id = "hidden-1" style = "display:none;">
-    </div>
-    <!--div for the report page text, hidden by default and unhidden when the user succesfully submits
+    </header>
+
+    <header class="feedback" id="feedback">
+      
+    </header>
+
+    <main class = "report-Block" id = "hidden-1" style = "display:none;">
+
+    </main>
+    <!--header for the report page text, hidden by default and unhidden when the user succesfully submits
     their answers-->
 
     
-    <div class = "question submit-Button-Box" id = "hidden-2" style = "display:none;">
-        <div class="score">
+    <section class = "question submit-Button-Box" id = "hidden-2" style = "display:none;">
+        <div role="score" class="score">
             
         </div>
+
         <form action = "index.html">
             <button class = "reset-Button" onclick="submitButtonPress();">
                 <span>Try again</span>
             </button>
         </form>
-    </div>
-    <!--div for restart button, hidden by default and unhidden when the user succesfully submits
+    </section>
+    <!--header for restart button, hidden by default and unhidden when the user succesfully submits
     their answers-->
 
 

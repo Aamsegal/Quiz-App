@@ -61,6 +61,21 @@ body {
   background-color: rgb(211,225,148);
 }
 
+.feedback {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding-bottom: 20px;
+  max-width: 600px;
+}
+
+.feedback p, button{
+  font-size: 32px;
+}
+
 .submit-Button {
   margin-left: auto;
   margin-right: auto;
@@ -90,6 +105,8 @@ body {
 }
 
 .question-Sentence {
+  margin-top: 10px;
+  margin-bottom: 10px;
   text-align: center;
   font-size: 25px;
   text-decoration: underline;
@@ -104,6 +121,11 @@ body {
 .correctAnswer {
   text-align: center;
   display: none;
+}
+
+.score {
+  font-size: 48px;
+  margin-bottom: 20px;
 }
 
 .score-Info {
@@ -131,15 +153,6 @@ body {
 .correct-Answer-Block {
   text-align: center;
 }
-
-/*.correct-Answer {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  border: 1px solid black;
-  max-width: 400px;
-  padding: 10px;
-}*/
 
 .correct-Answer {
   background-color: green;
