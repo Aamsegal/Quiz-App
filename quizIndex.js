@@ -3,7 +3,7 @@ const questionAndAnswer = [
 
     {question: "Which of the following dogs is the smallest?", answers:["Dachshund","Poodle","Pomeranian","Chihuahua"], correctAnswer:3, userAnswer:4},
 
-    {question: "What color are Zebras?", answers:["White with black stripes","Black with shite stripes","Both of the above","None of the above"], 
+    {question: "What color are Zebras?", answers:["White with black stripes","Black with white stripes","Both of the above","None of the above"], 
     correctAnswer:1, userAnswer:4},
 
     {question: "What existing bird has the largest wingspan?", answers:["Stork","Swan","Condor","Albatross"], correctAnswer:3, userAnswer:4},
